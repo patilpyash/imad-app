@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 
 var articles = {
-articleOne : {
+'article-one' : {
     title:'Article One | Yash',
     heading:'Article One',
     date:'11 August 2017',
@@ -24,7 +24,7 @@ articleOne : {
         </p>
         `,
 },
-articleTwo:{
+'article-two':{
     title:'Article Two | Yash',
     heading:'Article Two',
     date:'13 August 2017',
@@ -34,7 +34,7 @@ articleTwo:{
             </p>
         `,
 },
-articleThree:{
+'article-three':{
     title:'Article Three | Yash',
     heading:'Article Three',
     date:'16 August 2017',
@@ -78,8 +78,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function(req,res){
-    res.send(createTemplate(articleOne))
+app.get('/:articleName', function(req,res){
+    var articleName=req.params.ArticleName;
+    res.send(createTemplate(articles(articleName)));
 });
 
 app.get('/article-two', function(req,res){
