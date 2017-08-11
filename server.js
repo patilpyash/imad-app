@@ -6,7 +6,7 @@ var app = express();
 
 var articleOne = {
     title:'Article One | Yash',
-    head:'Article One',
+    heading:'Article One',
     date:'11 August 2017',
     content:`
         <p>
@@ -26,7 +26,7 @@ var articleOne = {
 function createTemplate(data){
 var title = data.title;
 var date = data.date;
-var head = data.head;
+var heading = data.heading;
 var content = data.content;
 var htmlTemplate =`
 <html>
@@ -39,7 +39,7 @@ var htmlTemplate =`
         <div class ='container'>
         <div><a href="/">Home</a></div>
         <hr/>
-        <h3>${head} | Yash</h3>
+        <h3>${heading} | Yash</h3>
         <div>${date}</div>
         ${content}
         </div>
