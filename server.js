@@ -40,7 +40,7 @@ var articles = {
     date:'16 August 2017',
     content:`
         <p>
-            This is the content for my first article.
+            This is the content for my third article.
             </p>
         `,
 },
