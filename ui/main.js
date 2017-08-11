@@ -1,6 +1,6 @@
 console.log('Loaded!');
 var element = document.getElementById('text');
-element.innerHTML("New Text");
+element.innerHTML="New Text";
 var img = document.getElementById('madi');
 var marginLeft = 10;
 function moveRight(){
