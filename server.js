@@ -4,7 +4,7 @@ var path = require('path');
 
 var app = express();
 
-var article = {
+var articleOne = {
     title:'Article One | Yash',
     heading:'Article One',
     date:'11 August 2017',
@@ -55,7 +55,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function(req,res){
-    res.send(createTemplate(article-one))
+    res.send(createTemplate(articleOne))
 });
 
 app.get('/article-two', function(req,res){
