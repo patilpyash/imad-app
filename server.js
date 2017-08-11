@@ -6,7 +6,7 @@ var app = express();
 
 var articleOne = {
     title:'Article One | Yash',
-    heading:'Article One',
+    head:'Article One',
     date:'11 August 2017',
     content:`
         <p>
