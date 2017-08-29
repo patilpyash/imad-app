@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 
 var app = express();
-
+/* mis
 var articles = {
 'article-one' : {
     title:'Article One | Yash',
@@ -48,6 +48,7 @@ var articles = {
 
 
 function createTemplate(data){
+var title = data.title;
 var date = data.date;
 var heading = data.heading;
 var content = data.content;
@@ -71,6 +72,7 @@ var htmlTemplate =`
 `;
 return htmlTemplate;
 }
+*/
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
