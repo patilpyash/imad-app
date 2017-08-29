@@ -31,6 +31,6 @@ button.onclick = function() {
         }
     };
     //make the req
-    request.open('GET','http://patilpyash.imad.hasura-app.io',true)
-    request.send("NULL")
+    request.open('GET','http://patilpyash.imad.hasura-app.io',true);
+    request.send("NULL");
 };
