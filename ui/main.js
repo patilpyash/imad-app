@@ -16,14 +16,21 @@ img.onclick = function(){
 //counter
 
 var button = document.getElementById('counter');
-var counter = 0;
 button.onclick = function() {
-    //make a request to counter end point
-    
+    //create a request obj
+    var request =new XMLHttpRequest();
     //capture respone in another variable
-    
-    //render the variable in correct span
-    counter = counter+1;
-    var span = document.getElementById('count');
-    span.innerHTML = counter.toString();
+    request.onreadystatechange = function(){
+        if(request.readyState==XMLHttpRequest.DONE){
+            //take action
+            if(request.status==200){
+                var counter = request.resposeText;
+                var span = document.getElementById('count');
+                span.innerHTML = counter.toString();
+            }
+        }
+    };
+    //make the req
+    request.open('GET','http://patilpyash.imad.hasura-app.io',true)
+    request.send("NULL")
 };
